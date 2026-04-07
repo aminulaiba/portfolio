@@ -14,7 +14,7 @@ function Certificates() {
             <h3 className='text-base text-text-h'>
                 Programming for Everybody (Getting Started with Python)
             </h3>
-            <ul className='list-disc'>
+            <ul className='list-disc list-inside text-center marker:text-accent'>
               <li>University of Michigan - Coursera</li>
             </ul>
 
