@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --accent-bg: #e6e6e6;
+  --bg-nav: #afafaf;
+
+  /* raw palette */
+  --light-orange: #fee4e2;
+  --deep-orange: #fa7b6f;
+  --deep-orange-rgb: 250, 123, 111;
+  
+  --light-green: #cef0e4;
+  --deep-green: #2e8b7a;
+  --deep-green-rgb: 46, 139, 122;
+
+  /* active accent (default = orange) */
+  --accent-light: var(--light-orange);
+  --accent-deep: var(--deep-orange);
+  --accent-shadow: var(--deep-orange-rgb);
+  
+  /* --accent-light: var(--light-green);
+  --accent-deep: var(--deep-green);
+  --accent-shadow: var(--deep-green-rgb); */
+
+  /*--accent:  Primary brand / highlight color
+  Buttons, links, focus states
+  Anything interactive or important */
+
+  --sans: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --heading: Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --accent-bg: #0c0d14;
+    --bg-nav: #000000;
+
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+@theme {
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-texturina: "Texturina", sans-serif;
+  --font-exo-2: "Exo 2", sans-serif;
+  --font-dancing-script: "Dancing Script", sans-serif;
+  --font-Roboto-Serif: "Roboto Serif", sans-serif;
+  --font-Ubuntu: "Ubuntu", sans-serif;
+
+
+  /* Colors */
+  --color-accent: var(--accent-deep); /* for variation, not dominance: Hover states, Small highlights, Tags / badges, Secondary buttons */
+  --color-accent-light: var(--accent-light);
+
+
+
+
+  --color-primary: #fa7b6f; /* “identity” of site: Buttons (main CTA), Links, Important highlights, Icons (active state) */
+  /* --color-accent: #fee4e2;  */
+  --color-text-h: var(--text-h);
+  --color-bg: var(--bg); /* canvas of site: Page background, Sections, Layout containers */
+  --color-accent-bg: var(--accent-bg);
+  --color-text: #1f2937; /* Headings, Paragraphs, Most text */
+  --color-muted: #6b7280; /* for less important info */
+}
+
+
+/* these are 2 sub themes' colors */
+/* --light-orange: #fee4e2;
+--deep-orange: #fa7b6f;
+
+--light-green: #cef0e4;
+--deep-green: #2e8b7a; */
+
+@utility bor {
+  @apply border border-red-500;
+}
