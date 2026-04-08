@@ -3,9 +3,24 @@ import { useState } from 'react'
 
 function Logo({name}) {
   const names = name.split(" ");
+  
+  const toggleAccent = ()=>{
+    const root = document.documentElement;
+    const current = root.getAttribute("data-accent");
+    const next = current==="green" ? null : "green"; 
+    //checking is there any data-accent attribute. if null then setting green as next. and if green then setting null sothat the default one works.
+
+    if(next){
+      root.setAttribute("data-accent", next);
+    } else{
+      root.removeAttribute("data-accent");
+    }
+
+
+  };
 
   return (
-    <>
+    <div onClick={toggleAccent} className='cursor-pointer'>
       <svg width="100%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" className=''>
         <defs>
             <style>{`
@@ -33,7 +48,7 @@ function Logo({name}) {
           strokeLinejoin="round">
         </circle>
       </svg>
-    </>
+    </div>
   )
 }
 

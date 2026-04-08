@@ -21,9 +21,7 @@
   --accent-deep: var(--deep-orange);
   --accent-shadow: var(--deep-orange-rgb);
   
-  /* --accent-light: var(--light-green);
-  --accent-deep: var(--deep-green);
-  --accent-shadow: var(--deep-green-rgb); */
+
 
   /*--accent:  Primary brand / highlight color
   Buttons, links, focus states
@@ -43,6 +41,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+}
+[data-accent="green"]{
+  --accent-light: var(--light-green);
+  --accent-deep: var(--deep-green);
+  --accent-shadow: var(--deep-green-rgb);
 }
 
 /* @media (prefers-color-scheme: dark) {
