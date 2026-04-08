@@ -18,7 +18,7 @@ function App() {
     <>
       {/* <Nav/> */}
       <NavBar/>
-      {/* <Hero/> */}
+      <Hero/>
       <About/>
 
 

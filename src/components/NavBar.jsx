@@ -10,9 +10,9 @@ function NavBar() {
         </div>
 
         <nav className='hidden md:flex items-center gap-6 text-gray-400'>
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#">Home</a>
+            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#home">Home</a>
 
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">About</a>
+            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#about">About</a>
 
             <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Projects</a>
 
@@ -23,7 +23,7 @@ function NavBar() {
 
         {/* Desktop Buttons */}
         <div className='hidden md:flex items-center gap-3'>
-          <button className='shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.2)] hover:shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.6)] text-accent hover:transition-all duration-500 rounded-full p-1 px-2'>☀</button>
+          <button onClick={()=>{document.documentElement.classList.toggle("dark");}} className='shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.2)] hover:shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.6)] text-accent hover:transition-all duration-500 rounded-full p-1 px-2 cursor-pointer'>☀</button>
           <button className='border border-accent hover:bg-accent text-accent hover:text-bg hover:transition-all duration-500 px-4 py-1 rounded-2xl'>Resume</button>
         </div>
 

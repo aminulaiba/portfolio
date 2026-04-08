@@ -45,7 +45,7 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
@@ -58,11 +58,15 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
-}
+} */
 
+.dark {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --accent-bg: #0c0d14;
+  --bg-nav: #000000;
 
-*{
-  box-sizing: border-box;
 }
 
 @theme {
@@ -75,12 +79,9 @@
   --font-Roboto-Serif: "Roboto Serif", sans-serif;
   --font-Ubuntu: "Ubuntu", sans-serif;
 
-
   /* Colors */
   --color-accent: var(--accent-deep); /* for variation, not dominance: Hover states, Small highlights, Tags / badges, Secondary buttons */
   --color-accent-light: var(--accent-light);
-
-
 
 
   --color-primary: #fa7b6f; /* “identity” of site: Buttons (main CTA), Links, Important highlights, Icons (active state) */
@@ -91,6 +92,13 @@
   --color-text: #1f2937; /* Headings, Paragraphs, Most text */
   --color-muted: #6b7280; /* for less important info */
 }
+
+
+*{
+  box-sizing: border-box;
+}
+
+
 
 
 /* these are 2 sub themes' colors */
