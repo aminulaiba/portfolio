@@ -5,8 +5,8 @@ import {stats} from '../data/data'
 function Hero() {
   return (
     <>
-    <section id='home' className='max-w-[90vw] lg:max-w-[70vw] mx-auto h-full pt-24'>
-      <div className='hero my-9 flex flex-col justify-between md:flex-row items-center gap-2'>
+    <section id='home' className=''>
+      <div className='hero flex flex-col justify-between md:flex-row items-center gap-2'>
 
         <div className='order-2 max-w-[500px] lg:max-w-[700px] md:order-1 flex flex-col items-center md:items-start gap-3'>
           <h1 className='font-Roboto-Serif text-7xl text-center md:text-start my-5'>Hello<br /> I'm <span className='font-texturina text-accent'>Aminul</span></h1>

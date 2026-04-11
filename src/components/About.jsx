@@ -7,7 +7,7 @@ import Experiences from './Experiences'
 function About() {
     const [activeTab, setActiveTab] = useState("about");
   return (
-    <div id='about' className='mt-35 mb-15 w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw] mx-auto md:flex md:justify-between gap-5 h-full'>
+    <div id='about' className='md:flex md:justify-between gap-5'>
 
         <div className='flex flex-col gap-5 min-w-50 pb-7'>
             <button onClick={() => setActiveTab("about")} className={`flex justify-between px-8 py-3 backdrop-blur-xl shadow-[0px_1px_10px_rgb(var(--accent-shadow),0.2)] ${activeTab==='about'?'shadow-[2px_1px_7px_rgb(var(--accent-shadow),0.7)]':''} rounded-md whitespace-nowrap text-accent cursor-pointer`}>
@@ -48,9 +48,6 @@ function About() {
             {activeTab === "education" && <Education/>}
             {activeTab === "certificates" && <Certificates/>}
             {activeTab === "experience" && <Experiences/>}
-            {/* <Education/> */}
-            {/* <Certificates/> */}
-            {/* <Experiences/> */}
         </div>
 
 
