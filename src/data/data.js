@@ -9,6 +9,7 @@ import {
   SiCloudinary,
   SiPython,
   SiGit,
+  SiGithub, 
   SiCplusplus,
   SiArduino,
   SiScikitlearn,
@@ -18,9 +19,15 @@ import {
   SiHtml5,
   SiC
 } from "react-icons/si";
-
+import { DiCss3 } from "react-icons/di";
+import { IoHardwareChip } from "react-icons/io5";
+import { RiRemoteControlLine } from "react-icons/ri";
+import { GiRobotGolem } from "react-icons/gi";
+import { RiRobot3Fill } from "react-icons/ri";
 import { FaDatabase } from "react-icons/fa";
 import { MdDevices } from "react-icons/md";
+
+import DjangoRestIcon from "./DjangoRestIcon"
 
 
 // Skills
@@ -32,15 +39,15 @@ export const skillGroups = [
       { name: "JavaScript", logo: SiJavascript },
       { name: "TypeScript", logo: SiTypescript },
       { name: "Tailwind CSS", logo: SiTailwindcss },
-      { name: "HTML", logo: SiHtml5 },
-      // { name: "CSS", logo: SiCss3 },
+      { name: "HTML5", logo: SiHtml5 },
+      { name: "CSS", logo: DiCss3 },
     ]
   },
   {
     title: "Backend",
     skills: [
       { name: "Django", logo: SiDjango },
-      // { name: "Django REST", logo: SiDjangorestframework },
+      { name: "DRF", logo: DjangoRestIcon},
       { name: "Python", logo: SiPython },
       { name: "SQL", logo: FaDatabase },
     ]
@@ -49,6 +56,7 @@ export const skillGroups = [
     title: "Tools",
     skills: [
       { name: "Git", logo: SiGit },
+      { name: "GitHub", logo: SiGithub },
       { name: "Docker", logo: SiDocker },
       { name: "Cloudinary", logo: SiCloudinary },
     ]
@@ -65,9 +73,9 @@ export const skillGroups = [
     title: "IoT / Hardware",
     skills: [
       { name: "Arduino", logo: SiArduino },
-      { name: "ESP8266", logo: MdDevices },
-      { name: "IoT", logo: MdDevices },
-      { name: "Robotics", logo: MdDevices },
+      { name: "ESP8266", logo: IoHardwareChip },
+      { name: "IoT", logo: RiRemoteControlLine },
+      { name: "Robotics", logo: RiRobot3Fill },
     ]
   }
 ];
