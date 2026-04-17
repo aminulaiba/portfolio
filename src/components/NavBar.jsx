@@ -15,8 +15,6 @@ function NavBar() {
             <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#about">About</a>
 
             <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Projects</a>
-
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Skills</a>
             
             <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Contact</a>
         </nav>

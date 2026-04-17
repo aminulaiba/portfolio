@@ -3,6 +3,7 @@ import AboutMe from './AboutMe'
 import Education from './Education'
 import Certificates from './Certificates'
 import Experiences from './Experiences'
+import Skills from './Skills'
 
 function About() {
     const [activeTab, setActiveTab] = useState("about");
@@ -23,6 +24,26 @@ function About() {
                 </path>
                 </svg>
                 Education
+            </button>
+            <button onClick={() => setActiveTab("skills")} className={`flex justify-between px-8 py-3 backdrop-blur-xl shadow-[0px_1px_10px_rgb(var(--accent-shadow),0.2)] ${activeTab==='skills'?'shadow-[2px_1px_7px_rgb(var(--accent-shadow),0.7)]':''} rounded-md whitespace-nowrap text-accent cursor-pointer`}>
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+                <title xmlns="">skills</title>
+                <circle cx="256" cy="256" r="48" fill="currentColor"/>
+                <path fill="currentColor" d="m470.39 300l-.47-.38l-31.56-24.75a16.11 16.11 0 0 1-6.1-13.33v-11.56a16 16 0 0 1 6.11-13.22L469.92 212l.47-.38a26.68 26.68 0 0 0 5.9-34.06l-42.71-73.9a1.6 1.6 0 0 1-.13-.22A26.86 26.86 0 0 0 401 92.14l-.35.13l-37.1 14.93a15.94 15.94 0 0 1-14.47-1.29q-4.92-3.1-10-5.86a15.94 15.94 0 0 1-8.19-11.82l-5.59-39.59l-.12-.72A27.22 27.22 0 0 0 298.76 26h-85.52a26.92 26.92 0 0 0-26.45 22.39l-.09.56l-5.57 39.67a16 16 0 0 1-8.13 11.82a175 175 0 0 0-10 5.82a15.92 15.92 0 0 1-14.43 1.27l-37.13-15l-.35-.14a26.87 26.87 0 0 0-32.48 11.34l-.13.22l-42.77 73.95a26.71 26.71 0 0 0 5.9 34.1l.47.38l31.56 24.75a16.11 16.11 0 0 1 6.1 13.33v11.56a16 16 0 0 1-6.11 13.22L42.08 300l-.47.38a26.68 26.68 0 0 0-5.9 34.06l42.71 73.9a1.6 1.6 0 0 1 .13.22a26.86 26.86 0 0 0 32.45 11.3l.35-.13l37.07-14.93a15.94 15.94 0 0 1 14.47 1.29q4.92 3.11 10 5.86a15.94 15.94 0 0 1 8.19 11.82l5.56 39.59l.12.72A27.22 27.22 0 0 0 213.24 486h85.52a26.92 26.92 0 0 0 26.45-22.39l.09-.56l5.57-39.67a16 16 0 0 1 8.18-11.82c3.42-1.84 6.76-3.79 10-5.82a15.92 15.92 0 0 1 14.43-1.27l37.13 14.95l.35.14a26.85 26.85 0 0 0 32.48-11.34a3 3 0 0 1 .13-.22l42.71-73.89a26.7 26.7 0 0 0-5.89-34.11m-134.48-40.24a80 80 0 1 1-83.66-83.67a80.21 80.21 0 0 1 83.66 83.67"/>
+                </svg> */}
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><title xmlns="">pc-display</title>
+                <path fill="currentColor" d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+                </svg> */}
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14"><title xmlns="">computer-chip-1-solid</title>
+                <path fill="currentColor" fill-rule="evenodd" d="M5.86.857a.75.75 0 1 0-1.5 0V2.5H4A1.5 1.5 0 0 0 2.5 4v.36H.857a.75.75 0 0 0 0 1.5H2.5v2.28H.857a.75.75 0 1 0 0 1.5H2.5V10A1.5 1.5 0 0 0 4 11.5h.36v1.643a.75.75 0 0 0 1.5 0V11.5h2.28v1.643a.75.75 0 0 0 1.5 0V11.5H10a1.5 1.5 0 0 0 1.5-1.5v-.36h1.643a.75.75 0 0 0 0-1.5H11.5V5.86h1.643a.75.75 0 0 0 0-1.5H11.5V4A1.5 1.5 0 0 0 10 2.5h-.36V.857a.75.75 0 0 0-1.5 0V2.5H5.86zm1.549 7.518a.625.625 0 1 0 0 1.25h2a.625.625 0 0 0 0-1.25z" clip-rule="evenodd"/>
+                </svg> */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                <title xmlns="">skills</title>
+                <path fill="currentColor" fill-rule="evenodd" d="M5.875.875a.875.875 0 1 0-1.75 0V2h-.5C2.728 2 2 2.728 2 3.625v.5H.875a.875.875 0 1 0 0 1.75H2v2.25H.875a.875.875 0 1 0 0 1.75H2v.5C2 11.273 2.728 12 3.625 12h.5v1.125a.875.875 0 0 0 1.75 0V12h2.25v1.125a.875.875 0 0 0 1.75 0V12h.5c.898 0 1.625-.727 1.625-1.625v-.5h1.125a.875.875 0 0 0 0-1.75H12v-2.25h1.125a.875.875 0 0 0 0-1.75H12v-.5C12 2.728 11.273 2 10.375 2h-.5V.875a.875.875 0 1 0-1.75 0V2h-2.25zM3.25 3.625c0-.207.168-.375.375-.375h6.75c.207 0 .375.168.375.375v6.75a.375.375 0 0 1-.375.375h-6.75a.375.375 0 0 1-.375-.375zM6.75 7.5a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/>
+                </svg>
+
+
+                Skills
             </button>
             <button onClick={() => setActiveTab("certificates")} className={`flex justify-between px-8 py-3 backdrop-blur-xl shadow-[0px_1px_10px_rgb(var(--accent-shadow),0.2)] ${activeTab==='certificates'?'shadow-[2px_1px_7px_rgb(var(--accent-shadow),0.7)]':''} rounded-md whitespace-nowrap text-accent cursor-pointer`}>
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -46,6 +67,7 @@ function About() {
         <div className='flex-1 shadow-[0px_4px_10px_rgb(var(--accent-shadow),0.2)] px-5 rounded-lg py-5'>
             {activeTab === "about" && <AboutMe/>}
             {activeTab === "education" && <Education/>}
+            {activeTab === "skills" && <Skills/>}
             {activeTab === "certificates" && <Certificates/>}
             {activeTab === "experience" && <Experiences/>}
         </div>

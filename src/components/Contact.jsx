@@ -58,7 +58,8 @@ function Contact() {
             </div>
             <div className='flex flex-col justify-center'>
               <h3 className='text-base'>Email</h3>
-              <h4 className='text-xl text-text-h wrap-break-word'>aminul.islam.fpp@gmail.com</h4>
+              {/* <h4 className='text-xl text-text-h wrap-break-word'>aminul.islam.fpp@gmail.com</h4> */}
+              <span className='text-xl text-text-h wrap-break-word min-w-0'>aminul.islam.fpp@gmail.com</span>
             </div>
           </li>
 
