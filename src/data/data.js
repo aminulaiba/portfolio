@@ -29,7 +29,6 @@ import { MdDevices } from "react-icons/md";
 
 import DjangoRestIcon from "./DjangoRestIcon"
 
-
 // Skills
 export const skillGroups = [
   {
@@ -80,17 +79,6 @@ export const skillGroups = [
   }
 ];
 
-
-
-
-
-
-
-
-
-
-
-
 // Summary statistics
 export const stats = [
   { label: "Projects Completed", value: 5 },
@@ -103,21 +91,37 @@ export const stats = [
 // Projects
 export const projects = [
   {
+    title: "E-commerce Store",
+    techStacks: ["React", "Django", "MySQL"],
+    github: "...",
+    live: "",
+    description: "Online store with cart and payment integration",
+
+    video: "/videos/dmo-for-testing.mp4",
+
+    images: [
+      "/images/ecom-1.png",
+      "/images/ecom-2.png",
+    ],
+  },
+  {
     title: "Portfolio Website",
-    tech: ["React", "Tailwind", "Vite"],
+    techStacks: ["React", "Tailwind", "Vite"],
     github: "",
     live: "",
     description: "Modern portfolio with animations",
-  },
-  {
-    title: "E-commerce Store",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "...",
-    live: "...",
-    description: "Online store with cart and payment integration",
-  },
-];
 
+    // 👇 add this
+    video: "/videos/portfolio.mp4",  // main demo
+
+    images: [
+      "/images/portfolio-1.png",
+      "/images/portfolio-2.png",
+      "/images/portfolio-3.png",
+    ],
+  },
+
+];
 // Experience
 export const experience = [
   {

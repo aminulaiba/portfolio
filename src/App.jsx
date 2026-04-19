@@ -10,6 +10,7 @@ import NavBar from './components/NavBar'
 import About from './components/About'
 import Contact from './components/Contact'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 
 
 
@@ -23,11 +24,10 @@ function App() {
 
       <div className='mt-35 mb-15 max-w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw] mx-auto'>
         {/* <Hero/> */}
-        <About/>
+        {/* <About/> */}
         {/* <Contact/> */}
 
-        {/* <Skills/> */}
-
+        <Projects/>
       </div>
 
 

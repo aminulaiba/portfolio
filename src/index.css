@@ -94,6 +94,9 @@
   --color-accent-bg: var(--accent-bg);
   --color-text: #1f2937; /* Headings, Paragraphs, Most text */
   --color-muted: #6b7280; /* for less important info */
+
+
+  --breakpoint-xs: 480px;
 }
 
 
