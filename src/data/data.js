@@ -97,11 +97,15 @@ export const projects = [
     live: "",
     description: "Online store with cart and payment integration",
 
-    video: "/videos/dmo-for-testing.mp4",
-
-    images: [
-      "/images/ecom-1.png",
-      "/images/ecom-2.png",
+    media: [
+      {
+        type: "video",
+        src: "/videos/dmo-for-testing.mp4",
+        thumbnail: "/img/dmo-for-testing-thumb.jpg",
+      },
+      { type: "image", src: "/img/logo_light.png" },
+      { type: "image", src: "/img/logo_dark1.png" },
+      { type: "image", src: "/img/logo_dark2.png" },
     ],
   },
   {
@@ -111,13 +115,15 @@ export const projects = [
     live: "",
     description: "Modern portfolio with animations",
 
-    // 👇 add this
-    video: "/videos/portfolio.mp4",  // main demo
-
-    images: [
-      "/images/portfolio-1.png",
-      "/images/portfolio-2.png",
-      "/images/portfolio-3.png",
+    media: [
+      {
+        type: "video",
+        src: "/videos/dmo-for-testing.mp4",
+        thumbnail: "/img/video-thumb.jpg",
+      },
+      { type: "image", src: "/img/logo_light.png" },
+      { type: "image", src: "/img/logo_dark1.png" },
+      { type: "image", src: "/img/logo_dark2.png" },
     ],
   },
 

@@ -8,10 +8,13 @@ function Projects() {
   const [index, setIndex] = useState(0);
   const project = projects[index];
 
+  const [selected, setSelected] = useState(project.media[0])
+
   return (
     <div className='flex flex-col gap-5 justify-center bg-accent-bg p-5 font-Roboto-Serif'>
-      <div className='flex flex-col justify-center items-center'>
-        <div className='w-full'>
+
+      <div className='flex flex-col justify-center items-stretch md:flex-row gap-5'>
+        <div className='w-full order-2 md:order-0 flex flex-col'>
           <h1 className='text-3xl my-3'>{ project.title }</h1>
           <p className='text-justify my-4'>
             { project.description }
@@ -30,12 +33,34 @@ function Projects() {
           </div>
         </div>
 
-        <div className='bor my-5'>
-          <div>
-            <video src=""></video>
+        {/* video div */}
+        <div className='w-full'>
+          {/* main display div */}
+          <div className='w-full aspect-video overflow-hidden rounded-lg bg-black mb-3'>
+            {selected.type === 'video'?(
+              <video
+              src={selected.src}
+              autoPlay
+              loop
+              muted
+              />
+            ):(
+              <img src={selected.src} alt="" />
+            )}
           </div>
-          <div>
-            image
+          
+          {/* ss preview */}
+          <div className='flex justify-center items-center gap-2.5'>
+            {project.media.map((item, indx)=>(
+              // logic for img and vid
+              item.type=="image"?(
+                <img key={indx} onClick={()=> setSelected(item)} src={item.src} alt="" className={`w-15 h-15 object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
+              ):(
+                <img key={indx} onClick={()=> setSelected(item)} src={item.thumbnail} alt="" className={`w-15 h-15 object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
+                
+              )
+
+            ))}
           </div>
 
         </div>
