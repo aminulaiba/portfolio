@@ -73,9 +73,9 @@ function Projects() {
           <span className='shadow-[1px_1px_5px_rgb(var(--accent-shadow),0.4)] py-1 px-3 rounded-lg'>{index+1}</span>
 
           <div className='flex gap-2'>
-            <button onClick={()=> setIndex(index-1)} disabled={index==0} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>←</button>
+            <button onClick={()=> {setIndex(index-1); setSelected(project.media[0])}} disabled={index==0} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>←</button>
 
-            <button onClick={()=> setIndex(index+1)} disabled={index==projectsLenth-1} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>→</button>
+            <button onClick={()=> {setIndex(index+1); setSelected(project.media[0])}} disabled={index==projectsLenth-1} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>→</button>
           </div>
         </div>
     </div>
