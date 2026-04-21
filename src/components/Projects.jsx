@@ -7,6 +7,7 @@ import { IoMdLink } from "react-icons/io";
 function Projects() {
   const [index, setIndex] = useState(0);
   const project = projects[index];
+  const projectsLenth = projects.length;
 
   const [selected, setSelected] = useState(project.media[0])
 
@@ -40,7 +41,7 @@ function Projects() {
             {selected.type === 'video'?(
               <video
               src={selected.src}
-              autoPlay
+              // autoPlay
               loop
               muted
               />
@@ -67,8 +68,15 @@ function Projects() {
 
       </div>
 
-        <div className='bor order-3'>
-          numbering count
+        <div className='order-3 flex justify-between items-center'>
+
+          <span className='shadow-[1px_1px_5px_rgb(var(--accent-shadow),0.4)] py-1 px-3 rounded-lg'>{index+1}</span>
+
+          <div className='flex gap-2'>
+            <button onClick={()=> setIndex(index-1)} disabled={index==0} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>←</button>
+
+            <button onClick={()=> setIndex(index+1)} disabled={index==projectsLenth-1} className='w-9 h-9 border border-accent text-accent enabled:hover:border-accent enabled:hover:bg-accent enabled:hover:text-bg rounded-full transition-all duration-400 disabled:opacity-40'>→</button>
+          </div>
         </div>
     </div>
   )

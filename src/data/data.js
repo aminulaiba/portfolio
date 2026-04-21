@@ -109,6 +109,24 @@ export const projects = [
     ],
   },
   {
+    title: "E-commerce tesssttt Store",
+    techStacks: ["React", "Django", "MySQL"],
+    github: "...",
+    live: "",
+    description: "Online store with cart and payment integration andmalokjk ajdk ahd a dka f ",
+
+    media: [
+      {
+        type: "video",
+        src: "/videos/dmo-for-testing.mp4",
+        thumbnail: "/img/dmo-for-testing-thumb.jpg",
+      },
+      { type: "image", src: "/img/logo_light.png" },
+      { type: "image", src: "/img/logo_dark1.png" },
+      { type: "image", src: "/img/logo_dark2.png" },
+    ],
+  },
+  {
     title: "Portfolio Website",
     techStacks: ["React", "Tailwind", "Vite"],
     github: "",
