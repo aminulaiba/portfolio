@@ -117,3 +117,28 @@
 @utility bor {
   @apply border border-red-500;
 }
+
+
+
+
+
+/* thin scrollbar */
+.scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* track */
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* thumb */
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 9999px;
+}
+
+/* hover effect */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -12,7 +12,7 @@ function Projects() {
   const [selected, setSelected] = useState(project.media[0])
 
   return (
-    <div className='flex flex-col gap-5 justify-center bg-accent-bg p-5 font-Roboto-Serif'>
+    <div className='flex flex-col gap-5 justify-between bg-accent-bg min-h-[60vh] p-5 font-Roboto-Serif'>
 
       <div className='flex flex-col justify-center items-stretch md:flex-row gap-5'>
         <div className='w-full order-2 md:order-0 flex flex-col'>
@@ -51,13 +51,13 @@ function Projects() {
           </div>
           
           {/* ss preview */}
-          <div className='flex justify-center items-center gap-2.5'>
+          <div className='flex overflow-x-auto scrollbar pb-3 justify-center items-center gap-2.5'>
             {project.media.map((item, indx)=>(
               // logic for img and vid
               item.type=="image"?(
-                <img key={indx} onClick={()=> setSelected(item)} src={item.src} alt="" className={`w-15 h-15 object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
+                <img key={indx} onClick={()=> setSelected(item)} src={item.src} alt="" className={`h-12 xs:h-14 aspect-square object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
               ):(
-                <img key={indx} onClick={()=> setSelected(item)} src={item.thumbnail} alt="" className={`w-15 h-15 object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
+                <img key={indx} onClick={()=> setSelected(item)} src={item.thumbnail} alt="" className={`h-12 xs:h-14 aspect-square object-cover border rounded-md ${selected.src==item.src?'border-3':''}`}/>
                 
               )
 
