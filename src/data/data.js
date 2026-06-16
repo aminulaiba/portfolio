@@ -161,3 +161,18 @@ export const experience = [
     description: "Assisted with web development and UI design",
   },
 ];
+//Certificates
+export const certificates =[
+  {
+    date: "October - 2020",
+    courseTitle: "Programming for Everybody (Getting Started with Python)",
+    issuedBy: "University of Michigan - Coursera",
+    certificateURL: "https://www.coursera.org/account/accomplishments/verify/VVHPWRV9VXJL",
+  },
+  {
+    date: "May - 2026",
+    courseTitle: "Linear Algebra for Machine Learning and Data Science",
+    issuedBy: "DeepLearning.AI - Coursera",
+    certificateURL: "https://coursera.org/share/c09e3ec8e911b9e712272c9663a03433",
+  },
+]
