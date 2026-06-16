@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 
 import './App.css'
 import Nav from './components/Nav'
@@ -23,11 +24,13 @@ function App() {
       <NavBar/>
 
       <div className='mt-35 mb-15 max-w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw] mx-auto'>
-        {/* <Hero/> */}
-        {/* <About/> */}
-        {/* <Contact/> */}
 
-        <Projects/>
+        <Routes>
+          <Route path='/' element={<Hero/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/projects' element={<Projects/>} />
+        </Routes>
       </div>
 
 

@@ -1,22 +1,41 @@
 import React, {useState} from 'react'
 import Logo from './Logo'
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
+    const [activeLink, setActiveLink] = useState('home')
+
+    const navHoverLinkStyle = "relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100";
+
+    const navActiveLinkStyle = "relative text-sm py-1 text-gray-400 text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-100";
+
   return (
     <header className='fixed top-3 left-1/2 -translate-x-1/2 backdrop-blur-xl shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.4)] flex justify-between items-center w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw] my-7 px-4 py-3  rounded-lg z-50'>
         <div className='w-10 h-10'>
             <Logo name={"Aminul Islam"}/>
         </div>
 
+        {/* using navLink so that active link gets hilighted automatically. for this had to use a function inside the class prop */}
         <nav className='hidden md:flex items-center gap-6 text-gray-400'>
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#home">Home</a>
+            <NavLink 
+            to='/'
+            end
+            className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }>Home</NavLink>
 
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="#about">About</a>
+            <NavLink to='/about' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }>About</NavLink>
 
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Projects</a>
+            <NavLink to='/projects' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }>Projects</NavLink>
             
-            <a className="relative text-sm py-1 text-gray-400 hover:text-accent after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" href="">Contact</a>
+            <NavLink to='/contact' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }>Contact</NavLink>
         </nav>
 
         {/* Desktop Buttons */}
