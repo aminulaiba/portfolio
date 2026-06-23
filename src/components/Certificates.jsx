@@ -6,7 +6,7 @@ function Certificates() {
     <div>
         <h1 className='text-3xl my-5 text-center'>Certificates</h1>
         <p className='text-justify'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, tempora cumque debitis quod eius temporibus.
+            I believe learning extends beyond the classroom. I actively pursue certifications and online courses to strengthen my technical knowledge and stay up to date with industry trends. These achievements reflect my commitment to continuous learning and professional growth.
         </p>
 
         <div className='grid grid-cols-1 gap-3 lg:grid-cols-2 mt-9'>

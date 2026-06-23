@@ -8,7 +8,7 @@ function Skills() {
     <div>
       <h3 className='text-3xl my-5 text-center'>My Skills</h3>
       <p className='text-ju'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae nihil cumque excepturi dolorem odit hic consectetur placeat, dicta assumenda asperiores velit laboriosam. Sunt necessitatibus rem maxime obcaecati architecto magni.
+        I have experience working with modern web technologies, including React, Django, PostgreSQL, and REST APIs. Through hands-on projects and continuous learning, I strive to create reliable, user-friendly, and scalable applications while expanding my knowledge of emerging technologies.
       </p>
       {/* <section className='my-7'>
         {skillGroups.map((group, i) => (
