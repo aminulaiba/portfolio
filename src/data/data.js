@@ -79,15 +79,6 @@ export const skillGroups = [
   }
 ];
 
-// Summary statistics
-export const stats = [
-  { label: "Projects Completed", value: 5 },
-  { label: "Technologies Learned", value: 20 },
-  { label: "Months of Experience", value: 13 },
-  { label: "Certificates", value: 11 },
-  { label: "Code Commits", value: 99 },
-];
-
 // Projects
 export const projects = [
   {
@@ -176,3 +167,15 @@ export const certificates =[
     certificateURL: "https://coursera.org/share/c09e3ec8e911b9e712272c9663a03433",
   },
 ]
+
+
+// Summary statistics
+export const stats = [
+  { label: "Projects Completed", value: projects.length },
+  { label: "Technologies Learned", value: skillGroups.reduce(
+    (total, s)=> total+s.skills.length, 0
+  )},
+  { label: "Months of Experience", value: 13 },
+  { label: "Certificates", value: 11 },
+  { label: "Code Commits", value: 99 },
+];
