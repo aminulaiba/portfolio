@@ -24,7 +24,6 @@ function Contact() {
 
       <div className='flex'>
         <ul className='flex flex-col gap-5 justify-center items-start my-auto mx-auto md:grid md:grid-cols-2 md:justify-items-start xl:flex'>
-          <a href=""></a>
           <li className='flex justify-center items-center gap-5 p-3'>
             <div className='flex justify-center items-center p-2 bg-accent-bg text-accent'>
               <svg className='w-8 h-8' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
