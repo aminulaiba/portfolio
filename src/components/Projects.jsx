@@ -29,7 +29,9 @@ function Projects() {
           </div>
           <hr />
           <div className='flex justify-start items-center gap-2 text-accent my-3'>
-            <SiGithub className='w-5 h-5'/> 
+            <a href={project.github} target='blank'>
+              <SiGithub className='w-5 h-5'/>
+            </a>
             {project.live?<a href={project.live} target='blank'><IoMdLink className='w-5 h-5'/></a>:""}
           </div>
         </div>
@@ -41,7 +43,7 @@ function Projects() {
             {selected.type === 'video'?(
               <video
               src={selected.src}
-              // autoPlay
+              autoPlay
               loop
               muted
               />

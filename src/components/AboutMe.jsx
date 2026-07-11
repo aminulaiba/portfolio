@@ -9,7 +9,7 @@ function AboutMe() {
         </p>
         <div className='text-accent w-full my-9'>
                 <ul className='grid grid-cols-1 gap-3 md:grid-cols-2'>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/aminulislamai/" target='_blank'>
                         <li className='flex justify-center md:justify-start items-center gap-3 py-1 min-w-0'>
                             <div className='rounded-full'>
                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +21,7 @@ function AboutMe() {
                         </li>
                     </a>
                     
-                    <a href="#">
+                    <a href="mailto:aminul.islam.fpp@gmail.com?subject=Inquiry">
                         <li className='flex justify-center md:justify-start items-center gap-3 py-1 min-w-0'>
                             <div className='rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><title xmlns="">mail-32-filled</title>
@@ -32,7 +32,7 @@ function AboutMe() {
                         </li>
                     </a>
                     
-                    <a href="#">
+                    <a>
                         <li className='flex justify-center md:justify-start items-center gap-3 py-1 min-w-0'>
                             <div className='rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">location-filled</title>
@@ -43,7 +43,7 @@ function AboutMe() {
                         </li>
                     </a>
                     
-                    <a href="#">
+                    <a>
                         <li className='flex justify-center md:justify-start items-center gap-3 py-1 min-w-0'>
                             <div className='rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">phone-bold</title><path fill="currentColor" d="m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.437-1.787-.309-2.417.317"/></svg>
@@ -52,7 +52,7 @@ function AboutMe() {
                         </li>
                     </a>
                     
-                    <a href="#">
+                    <a>
                         <li className='flex justify-center md:justify-start items-center gap-3 py-1 min-w-0'>
                             <div className='rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-language</title>

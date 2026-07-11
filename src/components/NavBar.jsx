@@ -56,21 +56,49 @@ function NavBar() {
 
         {/* Overlay Mobile Menu */}
         <div
-        className={`fixed top-0 left-0 w-full h-screen bg-black/10 backdrop-blur-md text-white transform transition-transform duration-500 ease-in-out z-40 md:hidden
-        ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        className={`fixed top-0 left-0 w-full h-screen bg-bg/95 backdrop-blur-full text-white transform transition-transform duration-500 ease-in-out z-40 md:hidden
+        ${isOpen ? 'translate-y-0' : '-translate-y-[105%]'}`}
         >
             <div className='flex flex-col items-center justify-center h-full gap-6 text-lg'>
 
-            <a href="#" onClick={() => setIsOpen(false)}>Home</a>
-            <a href="#" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Projects</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Skills</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Contact</a>
 
-            <div className='flex gap-4 mt-4'>
+
+            <NavLink 
+            to='/'
+            end
+            className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }
+            onClick={()=>setIsOpen(!isOpen)}
+            >Home</NavLink>
+
+            <NavLink to='/about' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }
+            onClick={()=>setIsOpen(!isOpen)}
+            >About</NavLink>
+
+            <NavLink to='/projects' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }
+            onClick={()=>setIsOpen(!isOpen)}
+            >Projects</NavLink>
+            
+            <NavLink to='/contact' className={({isActive }) =>
+            isActive?navActiveLinkStyle:navHoverLinkStyle
+            }
+            onClick={()=>setIsOpen(!isOpen)}
+            >Contact</NavLink>
+
+                <button onClick={()=>{document.documentElement.classList.toggle("dark"); setIsOpen(!isOpen)}} className='shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.2)] hover:shadow-[0px_4px_20px_rgb(var(--accent-shadow),0.6)] text-accent hover:transition-all duration-500 rounded-full p-1 px-2 cursor-pointer'>☀</button>
+
+                <button className='border border-accent hover:bg-accent text-accent hover:text-bg hover:transition-all duration-500 px-4 py-1 rounded-2xl'>Resume</button>
+
+
+            {/* <div className='flex gap-4 mt-4'>
                 <button className='bg-blue-400 rounded-2xl px-3 py-1'>🌗</button>
                 <button className='bg-blue-400 px-4 py-1 rounded-2xl'>Resume</button>
-            </div>
+            </div> */}
 
             </div>
         </div>

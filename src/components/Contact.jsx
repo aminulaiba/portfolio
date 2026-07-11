@@ -1,10 +1,37 @@
 import React from 'react'
 
 function Contact() {
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // Stops the page reload
+    const formData = new FormData(e.target);
+
+    try {
+      // 1. Send the data 
+      const response = await fetch("https://formspree.io/f/maqgrran", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      // 2. Checking successful or not
+      if (response.ok) {
+        alert("Thank you for reaching out! Your message has been sent successfully. I'll get back to you as soon as possible.");
+        e.target.reset(); // Clear the text boxes only on success
+      } else {
+        alert("Formspree error. Please check your form ID.");
+      }
+    } catch (error) {
+      alert("Network error. Check your internet connection.");
+    }
+  };
+
   return (
     <div className='font-Roboto-Serif grid grid-cols-1 gap-5 xl:grid-cols-2'>
       <div className=''>
-          <form action="#" className='flex flex-col gap-7 items-stretch justify-center p-11 bg-accent-bg rounded-xl'>
+          <form onSubmit={handleFormSubmit} method='POST' className='flex flex-col gap-7 items-stretch justify-center p-11 bg-accent-bg rounded-xl'>
             <h3 className='text-center text-3xl text-accent'>Let's Collaborate</h3>
             <p>Have a question or interested in working together? Don't hesitate to reach out.</p>
 
@@ -14,7 +41,7 @@ function Contact() {
               <input className='px-7 h-12 rounded-lg focus:text-accent/60 focus:placeholder:text-text-h placeholder:text-accent/40 outline-none bg-bg' name='email' placeholder='Email' type="email" />
               <input className='px-7 h-12 rounded-lg focus:text-accent/60 focus:placeholder:text-text-h placeholder:text-accent/40 outline-none bg-bg' name='phone' placeholder='Phone Number' type="tel" />
             </div>
-            <textarea name="" id="" className='px-7 py-3 rounded-lg min-h-[150px] focus:text-accent/60 focus:placeholder:text-text-h placeholder:text-accent/40 outline-none bg-bg' placeholder='Your Massage'></textarea>
+            <textarea name="message" id="" className='px-7 py-3 rounded-lg min-h-[150px] focus:text-accent/60 focus:placeholder:text-text-h placeholder:text-accent/40 outline-none bg-bg' placeholder='Your Massage'></textarea>
             
             <button className='max-w-25 mx-auto rounded-lg font-semibold bg-[#0cc96aaf] text-text-h
             py-2 px-5' type='submit'>SEND</button>
