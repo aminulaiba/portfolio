@@ -156,16 +156,25 @@ export const experience = [
 //Certificates
 export const certificates =[
   {
-    date: "October - 2020",
-    courseTitle: "Programming for Everybody (Getting Started with Python)",
-    issuedBy: "University of Michigan - Coursera",
-    certificateURL: "https://www.coursera.org/account/accomplishments/verify/VVHPWRV9VXJL",
+    date: "August - 2026",
+    courseTitle: "Calculus for Machine Learning and Data Science",
+    issuedBy: "DeepLearning.AI - Coursera",
+    // certificateURL: "https://coursera.org/share/2ff8141d3a2f7a2a6b4703056d9045f3",
+    certificateURL: "https://coursera.org/share/5467903bb7990a551e454b072914c745",
   },
+
   {
     date: "May - 2026",
     courseTitle: "Linear Algebra for Machine Learning and Data Science",
     issuedBy: "DeepLearning.AI - Coursera",
     certificateURL: "https://coursera.org/share/c09e3ec8e911b9e712272c9663a03433",
+  },
+
+  {
+    date: "October - 2020",
+    courseTitle: "Programming for Everybody (Getting Started with Python)",
+    issuedBy: "University of Michigan - Coursera",
+    certificateURL: "https://www.coursera.org/account/accomplishments/verify/VVHPWRV9VXJL",
   },
 ]
 
